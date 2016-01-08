@@ -12,7 +12,7 @@
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
     <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
-    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700|Lato:400,300,300italic,400italic,700,700italic|Roboto:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ site.baseurl }}/fonts/stylesheet.css" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
   </head>
@@ -20,7 +20,7 @@
   <body>
     <header>
       <div class="container">
-        <a href="{{ site.baseurl }}/" class="site-logo"><img src="{{ site.avatar }}" /></a>
+        <a href="{{ site.baseurl }}/" class="site-logo"><img src="{{ site.avatar }}" /> {{ site.name }}</a>
         <nav>
           <!-- <a href="{{ site.baseurl }}/">Home</a> -->
           <!-- <a href="{{ site.baseurl }}/work">Work</a>
@@ -30,8 +30,7 @@
     </header>
 
     <section class="container hero-container">
-      <h2>Cirkut Media helps you connect the dots between your business and the digital world.</h2>
-      <img src="//placehold.it/1600x900" class="hero-image">
+      <h2>Cirkut Media is a web development company that can help you connect the dots between your business and the digital world.</h2>
     </section>
 
     <!-- <section id="main" role="main" class="container">
