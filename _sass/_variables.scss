@@ -4,7 +4,7 @@
 //
 
 // Colors
-$blue: #4183C4;
+$primary: #194158;
 
 $width-desktop: 1140px;
 $width-tablet: 680px;
@@ -15,13 +15,13 @@ $black: #000;
 $darkerGray: #222;
 $darkGray: #333;
 $gray: #666;
-$lightGray: #eee;
+$lightGray: #bbb;
+$lighterGray: #eee;
 $white: #fff;
 
 // Font stacks
-$helvetica: Helvetica, Arial, sans-serif;
-$helveticaNeue: "Helvetica Neue", Helvetica, Arial, sans-serif;
-$georgia: Georgia, serif;
+$defaultFonts: "Proxima Nova", "Brandon Grotesque", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$fancyFonts: "Brandon Grotesque", "Proxima Nova", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
 
 // Mobile breakpoints
 @mixin mobile {

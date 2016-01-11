@@ -1,13 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html id="top">
   <head>
     <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
 
     {% include meta.html %}
-
-    <!--[if lt IE 9]>
-      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
 
     <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
@@ -15,31 +11,205 @@
     <link rel="stylesheet" href="{{ site.baseurl }}/fonts/stylesheet.css" type="text/css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.6/compressed/themes/default.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.6/compressed/themes/default.date.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.6/picker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pickadate.js/3.5.6/compressed/picker.date.js"></script>
   </head>
 
   <body>
     <header>
       <div class="container">
-        <a href="{{ site.baseurl }}/" class="site-logo"><img src="{{ site.avatar }}" /> {{ site.name }}</a>
+        <a href="{{ site.baseurl }}/" class="site-logo"><img src="{{ site.avatar }}" /></a>
         <nav>
-          <!-- <a href="{{ site.baseurl }}/">Home</a> -->
-          <!-- <a href="{{ site.baseurl }}/work">Work</a>
-          <a href="{{ site.baseurl }}/contact">Contact</a> -->
+          <a href="#top">Home</a>
+          <a href="#services">Services</a>
+          <a href="#work">Work</a>
+          <!-- <a href="#blog">Blog</a> -->
+          <a href="#contact">Contact</a>
         </nav>
       </div>
     </header>
 
-    <section class="container hero-container">
-      <h2>Cirkut Media is a web development company that can help you connect the dots between your business and the digital world.</h2>
+    <section class="container hero">
+      <h1>Cirkut Media is a design &amp; web development agency that helps connect the dots between your business and the digital world.</h1>
+      <a href="#contact" class="button">Contact Us <i class="ion-arrow-right-c"></i></a>
     </section>
 
     <!-- <section id="main" role="main" class="container">
       {{ content }}
     </section> -->
 
+    <section id="services" class="container services">
+      <h3>How can we help?</h3>
+      <div class="row">
+        <div class="six columns offset-by-three">
+          <p class="large">We believe in three fundamental <strong>S</strong>'s when it comes to taking care of our clients.</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="service column one-third">
+          <i class="icon ion-ios-color-filter"></i>
+          <h5>Style</h5>
+          <p>Stand out from the crowd where bad design and poor layouts run rampant. You handle the content, we'll make sure it looks amazing.</p>
+        </div>
+        <div class="service column one-third">
+          <i class="icon ion-ios-pulse"></i>
+          <h5>Stability</h5>
+          <p>No site on the Internet is up 100% of the time (not even Google!), but we come close at 99.99% uptime. Don't believe us? Check our <a href="http://status.cirkutmedia.com/" target="_blank">status page</a>!</p>
+        </div>
+        <div class="service column one-third">
+          <i class="icon ion-ios-locked"></i>
+          <h5>Security</h5>
+          <p>A hacked site causes headaches for everyone. We run daily scans on our servers and check for vulnerabilities to keep ahead of the hackers.</p>
+        </div>
+        <hr>
+      </div>
+    </section>
+
+    <section id="work" class="work container">
+      <h3>Some of our work</h3>
+      <div class="row">
+        <div class="six columns offset-by-three">
+          <p class="large">Take a look at some of the work we've done for clients!<br>Like what you see?<br><br><a href="#contact" class="button small"> Contact Us</a></p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="column one-third work-item">
+          <a href="http://www.tcoa.org" target="_blank"><img class="u-rounded" src="/images/work/tcoa.jpg"></a>
+        </div>
+        <div class="column one-third work-item">
+          <a href="http://www.smitten-photography.com" target="_blank"><img class="u-rounded" src="/images/work/smitten-photography.jpg"></a>
+        </div>
+        <div class="column one-third work-item">
+          <a href="http://firststeptocare.com" target="_blank"><img class="u-rounded" src="/images/work/first-step-to-care.jpg"></a>
+        </div>
+      </div>
+      <!-- <div class="row">
+        <div class="column one-third work-item">
+          <img class="u-rounded" src="//placehold.it/800x600">
+        </div>
+        <div class="column one-third work-item">
+          <img class="u-rounded" src="//placehold.it/800x600">
+        </div>
+        <div class="column one-third work-item">
+          <img class="u-rounded" src="//placehold.it/800x600">
+        </div>
+      </div> -->
+    </section>
+
+    <section id="contact" class="contact">
+      <form action="//formspree.io/josh@cirkut.net" class="container" method="POST">
+        <h3 class="u-text-center">Let's talk!</h3>
+        <div class="row u-text-center">
+          <div class="ten columns offset-by-one">
+            <p class="">Give us a bit of information on your project and we'll be in touch!</p>
+          </div>
+        </div>
+        <div class="row">
+            <div class="one-half column">
+              <label for="name">Name</label>
+              <input class="u-full-width" type="text" name="name">
+            </div>
+            <div class="one-half column">
+              <label for="_replyto">Email</label>
+              <input class="u-full-width" type="email" name="_replyto">
+            </div>
+          </div>
+          <div class="row">
+            <div class="twelve columns">
+              <label for="message">Message</label>
+              <textarea class="u-full-width" name="message" id="message" rows="10"></textarea>
+            </div>
+          </div>
+          <div class="row dates">
+            <div class="one-half column">
+              <div class="row">
+                <div class="six columns">
+                  <label for="start_date">Ideal Start Date</label>
+                  <input class="u-full-width datepicker" type="text" name="start_date">
+                </div>
+                <div class="six columns">
+                  <label class="checkbox"><input type="checkbox" value="no_rush"> No Rush</label>
+                </div>
+              </div>
+            </div>
+            <div class="one-half column">
+              <div class="row">
+                <div class="six columns">
+                  <label for="end_date">Ideal Launch Date</label>
+                  <input class="u-full-width datepicker" type="text" name="end_date">
+                </div>
+                <div class="six columns">
+                  <label class="checkbox"><input type="checkbox" value="when_ready"> When Ready</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <label for="budget">Likely Budget</label>
+            <div class="twelve columns">
+              <label class="radio four columns"><input type="radio" name="budget" value="$100-$300"> $100-$300</label>
+              <label class="radio four columns"><input type="radio" name="budget" value="$300-$750"> $300-$750</label>
+              <label class="radio four columns"><input type="radio" name="budget" value="$750-$1500"> $750-$1500</label>
+            </div>
+            <div class="twelve columns">
+              <label class="radio four columns"><input type="radio" name="budget" value="$1500-$2500"> $1500-$2500</label>
+              <label class="radio four columns"><input type="radio" name="budget" value="$2500-$5000"> $2500-$5000</label>
+              <label class="radio four columns"><input type="radio" name="budget" value="$5000+"> $5000+</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="twelve columns">
+              <label for="heard_of_us">How did you hear about us?</label>
+              <input class="u-full-width" type="text" name="heard_of_us">
+            </div>
+          </div>
+          <input type="hidden" name="_subject" value="Cirkut Media Contact Form Submission" />
+          <input type="text" name="_gotcha" style="display:none" />
+          <div class="row">
+            <div class="twelve columns">
+              <input type="submit" class="button large" value="Send">
+            </div>
+          </div>
+        </div>
+      </form>
+    </section>
+
     <footer class="footer">
-      {% include svg-icons.html %}
+      <div class="container">
+        <div class="row">
+          <div class="column one-third">
+            <h6>About Us</h6>
+            <p>Cirkut Media is a design &amp; web development agency that helps connect the dots between your business and the digital world.</p>
+            {% include svg-icons.html %}
+          </div>
+        </div>
+      </div>
+      <div class="sub-footer">
+        <div class="container">
+          <p>&copy; {{ site.name }} 2010<script>new Date().getFullYear()>2010&&document.write("-"+new Date().getFullYear());</script>. All Rights Reserved</p>
+        </div>
+      </div>
     </footer>
+
+    <script>
+      $(function() {
+        $('a[href*=#]:not([href=#])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: (target.offset().top - 120)
+              }, 1000);
+              return false;
+            }
+          }
+        });
+        $('.datepicker').pickadate();
+      });
+    </script>
 
     {% include analytics.html %}
   </body>
