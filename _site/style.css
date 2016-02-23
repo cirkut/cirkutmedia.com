@@ -1168,7 +1168,8 @@ header nav a:hover {
   font-size: 1.8rem;
   line-height: 2.6rem;
 }
-.work .column {
+.work .column,
+.work .columns {
   margin-bottom: 4%;
 }
 .work .work-item {
