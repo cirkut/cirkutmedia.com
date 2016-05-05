@@ -2,6 +2,8 @@
 # This file contains configuration flags to customize your site
 #
 
+destination: ./site
+
 # Name of your site (displayed in the header)
 name: Cirkut Media
 
